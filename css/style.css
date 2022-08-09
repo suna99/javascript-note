@@ -1,0 +1,157 @@
+/* container */
+.container{
+  padding: 0 100px;
+}
+
+/* top */
+.top a{
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  color: #fff;
+  background: #4A00E0;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 84px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.top a:hover{
+  transform: scale(110%, 110%);
+}
+
+/* header */
+header{
+  padding: 40px 0;
+  border-bottom: rgb(204, 204, 204) solid 1px;
+}
+
+header h1{
+  font-size: 44px;
+  margin-bottom: 30px;
+}
+
+header .nav ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header .nav a{
+  display: block;
+  height: 50px;
+  width: 190px;
+  border: #777 solid 1px;
+  color: #222;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 100px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+header .nav a:hover{
+  background: #4A00E0;
+  border: #4A00E0 solid 1px;
+  color: #fff;
+}
+
+header .nav li:last-child{
+  margin-right: 0;
+}
+
+header .nav li.active a{
+  background: #4A00E0;
+  border: #4A00E0 solid 1px;
+  color: #fff;
+}
+
+/* main */
+
+/* note */
+main .note{
+  padding: 20px 0;
+  border-bottom: rgb(204, 204, 204) dashed 1px;
+}
+
+main .note ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .note li a{
+  display: block;
+  padding: 10px 16px;
+  border: #4A00E0 solid 1px;
+  color: #4A00E0;
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+
+main .note li a:hover{
+  background: #4A00E0;
+  color: #fff;
+}
+
+/* list */
+main .list{
+  padding: 20px 0;
+  border-bottom: rgb(204, 204, 204) dashed 1px;
+}
+
+main .list li{
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+  /* script */
+.script{
+  padding: 40px 0;
+}
+
+.script h2.first{
+  margin-top: 0;
+}
+
+.script h2{
+  font-size: 28px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.script .result h3{
+  font-size: 16px;
+  font-weight: 500;
+  width: auto;
+  background: #f2f2f2;
+  color: #4A00E0;
+  padding: 10px 0;
+  border-radius: 5px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.script .result .result_view{
+  display: none;
+}
+
+.script .result.active .result_view{
+  display: block;
+  background: #272822;
+  border-radius: 0 0 5px 5px;
+  color: #fff;
+  font-size: 18px;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px){
+  .container{
+    padding: 0 30px;
+  }
+}
+
