@@ -118,9 +118,10 @@ main .list li{
 }
 
 .script h2{
-  font-size: 28px;
+  font-size: 26px;
   margin-top: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  font-weight: 500;
 }
 
 .script .result h3{
