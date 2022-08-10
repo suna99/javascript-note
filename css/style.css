@@ -150,7 +150,7 @@ main .list li{
   line-height: 1.5;
 }
 
-@media (max-width: 800px){
+@media (max-width: 900px){
   .container{
     padding: 0 30px;
   }
