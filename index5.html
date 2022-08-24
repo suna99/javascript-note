@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/prism.css">
+
+    <!-- FONT -->
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+
+    <!-- fontAsome-->
+    <script src="https://kit.fontawesome.com/139e87cb0c.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="top">
+        <a href="#header">TOP</a>
+    </div>
+
+    <!-- header -->
+    <header id="header">
+        <div class="container">
+            <h1>Javascript</h1>
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="index.html">데이터 저장하기</a>
+                    </li>
+                    <li>
+                        <a href="index2.html">데이터 불러오기</a>
+                    </li>
+                    <li>
+                        <a href="index3.html">데이터 실행하기</a>
+                    </li>
+                    <li>
+                        <a href="index4.html">데이터 제어하기</a>
+                    </li>
+                    <li class="active">
+                        <a href="index5.html">문자열 객체</a>
+                    </li>
+                    <li>
+                        <a href="index6.html">배열 객체</a>
+                    </li>
+                    <li>
+                        <a href="index7.html">수학 객체</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- // header -->
+
+    <main id="main">
+        <div class="container">
+            <!-- list -->
+            <div class="list">
+                <ul>
+                    <li>
+                        <a href="#sample1"> 01. 문자열 : 문자열 결합 / 템플릿 문자열 </a>
+                    </li>
+                    <li>
+                        <a href="#sample2"> 02. 문자열 속성 : length : 문자열 길이 구하기 : 반환(숫자) </a>
+                    </li>
+                    <li>
+                        <a href="#sample3"> 03. 문자열 메서드 : toUpperCase() / toLowerCase() : 반환(문자열) </a>
+                    </li>
+                    <li>
+                        <a href="#sample4"> 04. 문자열 메서드 : trim() : 문자열 공백 제거 : 반환(문자열) </a>
+                    </li>
+                    <li>
+                        <a href="#sample5"> 05. 문자열 메서드 : indexOf / lastIndexOf() / search() / includes() / startsWidth() / endsWidth() : 문자열 검색 </a>
+                    </li>
+                    <li>
+                        <a href="#sample6"> 06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자열) </a>
+                    </li>
+                    <li>
+                        <a href="#sample7"> 07. 문자열 메서드 : slice() / substring() / substr(): 지정한 인덱스의 문자를 추출 : 반환(문자열) </a>
+                    </li>
+                    <li>
+                        <a href="#sample8"> 08. 문자열 메서드 : replace() : 문자열 변경 : 반환(문자열) </a>
+                    </li>
+                    <li>
+                        <a href="#sample9"> 09. 문자열 메서드 : split() : 문자열 반환 : 반환(문자열) </a>
+                    </li>
+                    <li>
+                        <a href="#sample10"> 10. 문자열 메서드 : padStart() : padEnd() : 문자열 끝 부분에 문자열 추가 : 반환(문자열)) </a>
+                    </li>
+                    <li>
+                        <a href="#sample11"> 11. 문자열 메서드 : encodeURL() : 문자열을 인코딩 : 반환(문자열) </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //list -->
+
+            <!-- script -->
+            <div class="script">
+                <!-- sample1 -->
+                <div id="sample1" class="sample1">
+                    <h2 class="first">
+                        01. 문자열 : 문자열 결합 / 템플릿 문자열
+                    </h2>
+                    <div class="code">
+                        <pre class="line-numbers">
+<code class="language-js">{
+  const str1 = "자바스크립트";
+  const str2 = "제이쿼리";
+
+  document.querySelector(".sample1_P1").innerHTML = str1 + str2;
+
+  const num1 = 100;
+  const num2 = 200;
+
+  document.querySelector(".sample1_P2").innerHTML = num1 + num2;
+
+  const txt1 = "모던";
+  const txt2 = "자바스크립트";
+  const txt3 = "핵심";
+
+  document.querySelector(".sample1_P3").innerHTML = "나는 " + txt1 + "(modern) " + txt2 + "(javascript) " + txt3 + "을 배우고 싶다.";
+
+  document.querySelector(".sample1_P4").innerHTML = `나는 ${txt1}(modern) ${txt2}(javascript) ${txt3}을 배우고 싶다.`;
+}</code></pre>
+                    </div>
+                    <div class="result">
+                        <h3>결과 보기</h3>
+                        <div class="result_view">
+                            <span>
+                                자바스크립트제이쿼리 <br/>
+                                300 <br/>
+                                나는 모던(modern) 자바스크립트(javascript) 핵심을 배우고 싶다. <br/>
+                                나는 모던(modern) 자바스크립트(javascript) 핵심을 배우고 싶다. <br/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sample1 -->
+
+                <!-- sample2 -->
+                <div id="sample2" class="sample2">
+                    <h2>
+                        02. 문자열 속성 : length : 문자열 길이 구하기 : 반환(숫자)
+                    </h2>
+                    <div class="code">
+                        <pre class="line-numbers">
+<code class="language-js">{
+  const str1 = "자바스크립트";
+  const currentStr1 = str1.length;
+
+  const str2 = "javascript";
+  const currentStr2 = str2.length;
+}</code></pre>
+                    </div>
+                    <div class="result">
+                        <h3>결과 보기</h3>
+                        <div class="result_view">
+                            <span>
+                                6 <br/>
+                                10
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sample2 -->
+
+                <!-- sample3 -->
+                <div id="sample3" class="sample3">
+                    <h2>
+                        03. 문자열 메서드 : toUpperCase() / toLowerCase() : 반환(문자열)
+                    </h2>
+                    <div class="code">
+                        <pre class="line-numbers">
+<code class="language-js">{
+  const str1 = "javascript";
+  const currentStr1 = str1.toUpperCase();
+
+  const str2 = "JAVASCRIPT";
+  const currentStr2 = str2.toLowerCase();
+}</code></pre>
+                    </div>
+                    <div class="result">
+                        <h3>결과 보기</h3>
+                        <div class="result_view">
+                            <span>
+                                JAVASCRIPT <br/>
+                                javascript
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sample3 -->
+
+                <!-- sample4 -->
+                <div id="sample4" class="sample4">
+                    <h2>
+                        04. 문자열 메서드 : trim() : 문자열 공백 제거 : 반환(문자열)
+                    </h2>
+                    <div class="code">
+                        <pre class="line-numbers">
+<code class="language-js">{
+  const str = "       'javascript'          ";
+  const currentStr = str.trim();
+}</code></pre>
+                    </div>
+                    <div class="result">
+                        <h3>결과 보기</h3>
+                        <div class="result_view">
+                            <span>
+                                'javascript'
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sample4 -->
+
+                <!-- sample5 -->
+                <div id="sample5" class="sample5">
+                    <h2>
+                        05. 문자열 메서드 : indexOf / lastIndexOf() / search() / includes() / startsWidth() / endsWidth() : 문자열 검색
+                    </h2>
+                    <div class="code">
+                        <pre class="line-numbers">
+<code class="language-js">{
+  const str = "자바스크립트(javascript) 공부";
+  
+  // indexOf : 배열에서 지정된 요소의 첫번째 인덱스를 반환
+  //         : 존재하지 않으면 -1을 반환
+  const text1 = str.indexOf("javascript");
+
+  const text2 = str.indexOf("자바스크립트");
+
+  const text3 = str.indexOf("제이쿼리");
+
+  const text4 = str.indexOf('a');
+
+//-----------------------------------//
+
+  // lastIndexOf : fromIndex의 역순으로 탐색하여 최초로 마주치는 인덱스를 반환
+  const text5 = str.lastIndexOf('a');
+
+//-----------------------------------//
+  
+  // search : 
+  // includes : 
+  const text6 = str.search(/javascript/);
+
+  const text7 = str.search(/jquery/);
+
+  const text8 = str.includes("javascript");
+
+  const text9 = str.includes("jquery");
+
+//-----------------------------------//
+  // startWith :
+  // endsWith : 
+  const text10 = str.startsWith("자바스크립트");
+
+  const text11 = str.endsWith("javascript");
+}</code></pre>
+                    </div>
+                    <div class="result">
+                        <h3>결과 보기</h3>
+                        <div class="result_view">
+                            <span>
+                                // indexOf<br/>
+                                7 <br/>
+                                0 <br/>
+                                -1 <br/>
+                                8 <br/>
+                                <br/>   
+                                // lastIndexOf<br/>
+                                10 <br/>
+                                <br/>   
+                                // search<br/>
+                                7 <br/>
+                                -1 <br/>
+                                <br/>   
+                                //includes<br/>
+                                true <br/>
+                                false<br/>
+                                <br/>   
+                                //startWith<br/>
+                                true <br/>
+                                <br/>   
+                                //endsWith<br/>
+                                false <br/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sample5 -->
+
+                <!-- sample6 -->
+                <div id="sample6" class="sample6">
+                    <h2>
+                        06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자열)
+                    </h2>
+                    <div class="code">
+                        <pre class="line-numbers">
+<code class="language-js">{
+  const str = "자바스크립트(javascript) 공부";
+
+  const text1 = str.charAt(4);
+  const text2 = str.charAt();
+}</code></pre>
+                    </div>
+                    <div class="result">
+                        <h3>결과 보기</h3>
+                        <div class="result_view">
+                            <span>
+                                립  <br/>
+                                자
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sample6 -->
+
+                <!-- sample7 -->
+                <div id="sample7" class="sample7">
+                    <h2>
+                        07. 문자열 메서드 : slice() / substring() / substr(): 지정한 인덱스의 문자를 추출 : 반환(문자열)
+                    </h2>
+                    <div class="code">
+                        <pre class="line-numbers">
+<code class="language-js">{
+  //slice(시작 인덱스)
+  //slice(시작 인덱스, 종료 인덱스)
+  //시작 값이 종료 값 보다 클 경우 : 결과 값 없음
+  //substring() : 시작 값이 종료 값 보다 클 경우 : 두 값을 바꿔서 처리 (에러 방지)
+  //substr(시작인덱스, 글자수)
+  const str = "자바스크립트(javascript) 공부"
+
+  const text1 = str.slice(1,4);
+
+  const text2 = str.slice(1);
+
+  const text3 = str.slice(3, -1);
+
+  const text4 = str.slice(-14, 17);
+
+  const text5 = str.slice(5, 1);  //앞 매개변수는 뒷 매개변수보다 작아야한다.
+
+  const text6 = str.substring(5, 1);  //해당 버그를 방지한다.
+
+  const text7 = str.substr(4, 2);
+}</code></pre>
+                    </div>
+                    <div class="result">
+                        <h3>결과 보기</h3>
+                        <div class="result_view">
+                            <span>
+                                바스크 <br />
+                                바스크립트(javascript) 공부 <br />
+                                크립트(javascript) 공 <br />
+                                javascript <br />
+                                실행 안됨<br />
+                                바스크립<br />
+                                립트<br />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sample7 -->
+
+                <!-- sample8 -->
+                <div id="sample8" class="sample8">
+                    <h2>
+                        08. 문자열 메서드 : replace() : 문자열 변경 : 반환(문자열)
+                    </h2>
+                    <div class="code">
+                        <pre class="line-numbers">
+<code class="language-js">{
+const str = "자바스크립트(javascript) 공부";
+const text = str.replace('공부','스터디');
+
+const str2 = "img01.jpg";
+const text2 = str2.replace('img01.jpg','img02.jpg');
+
+const str3 = "010-9312-9004";
+const text3 = str3.replace('-', '');
+
+const str4 = "010-9312-9004";
+const text4 = str4.replace(/-/g, '');
+
+const str5 = "010-9312-9005";
+const text5 = str5.replace(/-/g, ' ');
+}</code></pre>
+                    </div>
+                    <div class="result">
+                        <h3>결과 보기</h3>
+                        <div class="result_view">
+                            <span>
+                                자바스크립트(javascript) 스터디 <br />
+                                img02.jpg <br />
+                                0109312-9004 <br />
+                                01093129004 <br />
+                                010 9312 9005
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sample8 -->
+
+                <!-- sample9 -->
+                <div id="sample9" class="sample9">
+                    <h2>
+                        09. 문자열 메서드 : split() : 문자열 반환 : 반환(문자열)
+                    </h2>
+                    <div class="code">
+                        <pre class="line-numbers">
+<code class="language-js">{
+  const str = "자바스크립트(javascript) 공부";
+  const text = str.split('');
+
+  const text2 = str.split(' ');
+
+  const text3 = str.split('').join('/');
+
+  const str4 = "http://webstoryboy.co.kr/main.html?id=1234&name=webs";
+  const text4 = str4.split('&');
+
+  const str5 = "http://webstoryboy.co.kr/main.html?id=1235&name=webs";
+  const text5 = str5.split(/&|\?/);
+}</code></pre>
+                    </div>
+                    <div class="result">
+                        <h3>결과 보기</h3>
+                        <div class="result_view">
+                            <span>
+                                자,바,스,크,립,트,(,j,a,v,a,s,c,r,i,p,t,), ,공,부 <br />
+                                자바스크립트(javascript),공부 <br />
+                                자/바/스/크/립/트/(/j/a/v/a/s/c/r/i/p/t/)/ /공/부 <br />
+                                http://webstoryboy.co.kr/main.html?id=1234,name=webs <br />
+                                http://webstoryboy.co.kr/main.html,id=1235,name=webs
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sample9 -->
+
+                <!-- sample10 -->
+                <div id="sample10" class="sample10">
+                    <h2>
+                        10. 문자열 메서드 : padStart() : padEnd() : 문자열 끝 부분에 문자열 추가 : 반환(문자열))
+                    </h2>
+                    <div class="code">
+                        <pre class="line-numbers">
+<code class="language-js">{
+  const num = "7";
+  const text = num.padStart(2, '0');
+
+  const num2 = "456";
+  const text2 = num2.padStart(6, '123');
+
+  const num3 = "abc";
+  const text3 = num3.padStart(3, '0');
+
+  const num4 = "abc";
+  const text4 = num4.padStart(6);
+
+  const num5 = "7";
+  const text5 = num5.padEnd(2, '0');
+
+  const num6 = "456";
+  const text6 = num6.padEnd(6, '123');
+
+  const num7 = "abc";
+  const text7 = num7.padEnd(3, '0');
+
+  const num8 = "abc";
+  const text8 = num8.padEnd(6);
+}</code></pre>
+                    </div>
+                    <div class="result">
+                        <h3>결과 보기</h3>
+                        <div class="result_view">
+                            <span>
+                                07 <br />
+                                123456<br />
+                                abc<br />
+                                '   abc'<br />
+                                70<br />
+                                456123<br />
+                                abc<br />
+                                'abc   '
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sample10 -->
+
+                <!-- sample11 -->
+                <div id="sample11" class="sample11">
+                    <h2>
+                        11. 문자열 메서드 : encodeURL() : 문자열을 인코딩 : 반환(문자열)
+                    </h2>
+                    <div class="code">
+                        <pre class="line-numbers">
+<code class="language-js">{
+  const text = "https://webstoryboy.co.kr/자바스크립트.html";
+  const url = encodeURI(text);
+
+  const text2 = "https://webstoryboy.co.kr/자바스크립트.html";
+  const url2 = encodeURIComponent(text2);
+
+  const text3 = "https://webstoryboy.co.kr/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
+  const url3 = decodeURI(text3);
+    
+  const text4 = "https%3A%2F%2Fwebstoryboy.co.kr%2F%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
+  const url4 = decodeURIComponent(text4);
+}</code></pre>
+                    </div>
+                    <div class="result">
+                        <h3>결과 보기</h3>
+                        <div class="result_view">
+                            <span>
+                                https://webstoryboy.co.kr/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html <br />
+                                https%3A%2F%2Fwebstoryboy.co.kr%2F%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html <br/>
+                                https://webstoryboy.co.kr/자바스크립트.html <br/>
+                                https://webstoryboy.co.kr/자바스크립트.html <br/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sample11 -->
+
+            </div>
+            <!-- //script -->
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="./javascript/prism.js"></script>
+    <script src="./javascript/main.js"></script>
+
+</body>
+
+</html>
